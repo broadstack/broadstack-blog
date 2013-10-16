@@ -104,3 +104,7 @@ configure :build do
   # Or use a different image path
   # set :http_path, "/Content/images/"
 end
+
+
+set :markdown, tables: true, autolink: true, gh_blockcode: true, fenced_code_blocks: true
+set :markdown_engine, :redcarpet
