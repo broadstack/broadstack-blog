@@ -1,0 +1,23 @@
+<% wrap_layout :layout do %>
+
+<section class="post">
+
+  <header class="post-header">
+
+    <h2 class="post-title"><%= current_article.title %></h2>
+
+    <p class="post-meta">
+    — <%= current_article.metadata[:page]["author"] || "Paul Annesley" %>
+    </p>
+
+  </header>
+
+  <div class="post-description">
+
+    <%= current_article.body %>
+
+  </div>
+
+</section>
+
+<% end %>
