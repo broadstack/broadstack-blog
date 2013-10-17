@@ -110,3 +110,19 @@ set :markdown, tables: true, autolink: true, gh_blockcode: true, fenced_code_blo
 set :markdown_engine, :redcarpet
 
 activate :syntax
+
+activate :s3_sync do |s3_sync|
+  s3_sync.bucket                     = "blog.broadstack.com"
+  s3_sync.region                     = "us-east-1"
+  s3_sync.aws_access_key_id          = ENV["AWS_KEY_ID"]
+  s3_sync.aws_secret_access_key      = ENV["AWS_SECRET_KEY"]
+  s3_sync.delete                     = false
+  s3_sync.after_build                = false
+  s3_sync.prefer_gzip                = true
+  s3_sync.reduced_redundancy_storage = false
+
+  if %w{AWS_KEY_ID AWS_SECRET_KEY}.any? { |k| ENV[k].nil? || ENV[k].length.zero? }
+    puts "s3_sync: AWS_KEY_ID and AWS_SECRET_KEY required to sync"
+  end
+
+end
