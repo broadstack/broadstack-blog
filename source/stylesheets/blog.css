@@ -227,3 +227,10 @@ pre.highlight {
   padding: 10px 20px;
   font-size: 90%;
 }
+
+blockquote {
+  border-left: 4px solid #bed2bc;
+  background-color: #f8f8f8;
+  padding: 1px 1em;
+  margin: 1em 0;
+}
