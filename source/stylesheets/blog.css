@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body,html {
+  min-width: 400px;
+}
+
 a {
     color: #60a158;
     text-decoration: none;
