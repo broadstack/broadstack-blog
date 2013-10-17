@@ -5,8 +5,8 @@
 }
 
 a {
+    color: #60a158;
     text-decoration: none;
-    color: rgb(142, 142, 214);
 }
 a:hover,
 a:focus {
@@ -25,7 +25,7 @@ a:focus {
     bottom: 0;
     width: 25%;
     margin-left: -25%;
-    background: rgb(24, 33, 61);
+    background: #60a158;
     color: #fff;
 }
 
@@ -37,13 +37,36 @@ a:focus {
 .brand-title,
 .brand-tagline {
     margin: 0;
+    transition: font-size 0.2s ease;
 }
 .brand-title {
     text-transform: uppercase;
 }
 .brand-tagline {
     font-weight: 300;
-    color: rgb(142, 142, 214);
+    color: #bed2bc;
+}
+
+.brand-title a {
+  color: white;
+}
+
+@media (max-width: 1080px) and (min-width: 767px) {
+  .brand-title {
+    font-size: 1.6em;
+  }
+  .brand-tagline {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 940px) and (min-width: 767px) {
+  .brand-title {
+    font-size: 1.2em;
+  }
+  .brand-tagline {
+    font-size: 1.0em;
+  }
 }
 
 .nav-list {
@@ -57,16 +80,31 @@ a:focus {
     zoom: 1;
 }
 .nav-item a {
-    background: transparent;
-    border: 3px solid rgb(103, 103, 180);
-    color: #fff;
     margin-top: 1em;
 }
 .nav-item a:hover,
 .nav-item a:focus {
-    border: 3px solid rgb(142, 142, 214);
-    color: rgb(142, 142, 214);
     text-decoration: none;
+}
+.nav-item a.pure-button {
+    color: white;
+    border: 2px solid #bed2bc;
+    background-color: transparent;
+}
+.nav-item a.pure-button:hover {
+  border-color: white;
+  color: white;
+}
+.nav-item.broadstack-brand a,
+.nav-item.broadstack-brand a:hover {
+  background: url(/images/broadstack-15px.gif) black 10px 10px no-repeat;
+}
+.nav-item.broadstack-brand a {
+  padding-left: 32px;
+  padding-right: 12px;
+  text-transform: lowercase;
+  font-weight: bold;
+  line-height: 20px;
 }
 
 .content-subhead {
@@ -84,7 +122,10 @@ a:focus {
 }
 
 .post {
-    padding-bottom: 2em;
+    padding-bottom: 4em;
+}
+.post-header {
+  margin: 50px 0;
 }
 .post-title {
     font-size: 2em;
@@ -96,10 +137,12 @@ a:focus {
     float: right;
     margin-left: 1em;
 }
+.post-body,
 .post-description {
     font-family: Georgia, "Cambria", serif;
     color: #444;
     line-height: 1.8em;
+    font-size: 120%;
 }
 .post-meta {
     color: #999;

@@ -1,20 +1,22 @@
 <% wrap_layout :layout do %>
+<% article = current_article %>
 
 <section class="post">
 
   <header class="post-header">
 
-    <h2 class="post-title"><%= current_article.title %></h2>
+    <h2 class="post-title"><%= article.title %></h2>
 
     <p class="post-meta">
-    — <%= current_article.metadata[:page]["author"] || "Paul Annesley" %>
+      — <%= article.metadata[:page]["author"] || "Paul Annesley" %>,
+      <%= article.date.strftime('%b %e %Y') %>
     </p>
 
   </header>
 
-  <div class="post-description">
+  <div class="post-body">
 
-    <%= current_article.body %>
+    <%= article.body %>
 
   </div>
 

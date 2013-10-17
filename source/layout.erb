@@ -11,45 +11,43 @@
     <link rel="stylesheet" href="//yui.yahooapis.com/pure/0.3.0/base-min.css">
     <link rel="stylesheet" href="//yui.yahooapis.com/combo?<%= pure_modules.join("&amp;") %>">
     <link rel="stylesheet" href="/stylesheets/blog.css">
+    <link rel="stylesheet" href="/stylesheets/pure-broadstack.css">
 
     <script src="http://use.typekit.net/gis6vng.js"></script>
     <script>try { Typekit.load(); } catch (e) {} </script>
 
   </head>
 
-  <body>
+  <body class="pure-skin-broadstack">
     
-    <div class="pure-g-r" id="layout">
-        <div class="sidebar pure-u">
-            <header class="header">
-                <hgroup>
-                    <h1 class="brand-title">Broadstack Blog</h1>
-                    <h2 class="brand-tagline">Add-ons for web apps running anywhere.</h2>
-                </hgroup>
+  <div class="pure-g-r" id="layout">
+    <div class="sidebar pure-u">
+      <header class="header">
+        <hgroup>
+        <h1 class="brand-title">
+          <a href="/">Broadstack Blog</a>
+        </h1>
+        <h2 class="brand-tagline">Add-ons for web apps running anywhere.</h2>
+        </hgroup>
 
-                <nav class="nav">
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a class="pure-button" href="https://broadstack.com/">Broadstack</a>
-
-                        </li>
-                        <li class="nav-item">
-                            <a class="pure-button" href="/">Blog</a>
-
-                        </li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
-
-        <div class="pure-u-1">
-            <div class="content">
-
-                <%= yield %>
-
-            </div>
-        </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item broadstack-brand">
+              <a class="pure-button" href="https://broadstack.com/">Broadstack</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
     </div>
+
+    <div class="pure-u-1">
+      <div class="content">
+
+        <%= yield %>
+
+      </div>
+    </div>
+  </div>
 
   </body>
 </html>
