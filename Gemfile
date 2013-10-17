@@ -9,3 +9,5 @@ gem "middleman-blog", "~> 3.3.0"
 gem "builder", "~> 3.0"
 
 gem "redcarpet"
+
+gem "pry"
