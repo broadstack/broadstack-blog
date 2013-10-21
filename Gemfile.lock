@@ -1,5 +1,5 @@
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     activesupport (3.2.15)
       i18n (~> 0.6, >= 0.6.4)
@@ -136,8 +136,8 @@ PLATFORMS
 
 DEPENDENCIES
   builder (~> 3.0)
-  middleman (~> 3.1.6)
-  middleman-blog (~> 3.3.0)
+  middleman
+  middleman-blog
   middleman-s3_sync
   middleman-syntax
   pry
