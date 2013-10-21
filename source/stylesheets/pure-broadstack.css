@@ -3,108 +3,108 @@
  * http://yui.github.io/skinbuilder/?mode=pureindex.html?opt=broadstack,60a158,ffffff,1,1,10,1.5&h=0,-30,60&n=0,-30,75&l=0,-30,80&b=0,-30,90&mode=pure
  */
 body {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 /* from PURE buttons-core.css */
 .pure-skin-broadstack .pure-button {
-    /* Structure */
-    display: inline-block;
-    *display: inline; /*IE 6/7*/
-    zoom: 1;
-    line-height: normal;
-    white-space: nowrap;
-    vertical-align: baseline;
-    text-align: center;
-    cursor: pointer;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  /* Structure */
+  display: inline-block;
+  *display: inline; /*IE 6/7*/
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: baseline;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* Firefox: Get rid of the inner focus border */
 .pure-skin-broadstack .pure-button::-moz-focus-inner{
-    padding: 0;
-    border: 0;
+  padding: 0;
+  border: 0;
 }
 /* end from PURE buttons-core.css */
 /* from PURE buttons.css */
 /*csslint unqualified-attributes:false*/
 
 .pure-skin-broadstack .pure-button {
-    font-size: 100%;
-    *font-size: 90%; /*IE 6/7 - To reduce IE's oversized button text*/
-    *overflow: visible; /*IE 6/7 - Because of IE's overly large left/right padding on buttons */
-    padding: 0.5em 1.5em 0.5em;
-    color: #1a2518; /* rgba not supported (IE 8) */
-    /* color: rgba(0, 0, 0, 0.80); rgba supported */
-    /* *color: #444; IE 6 & 7 */
-    border: 1px solid #b5ccb3; /*IE 6/7/8*/
-    border: none rgba(0, 0, 0, 0); /*IE9 + everything else*/
-    background-color: #bed2bc;
-    text-decoration: none;
-    border-radius: 2px;
-    -webkit-font-smoothing: antialiased;
-    /* Transitions */
-    -webkit-transition: 0.1s linear -webkit-box-shadow;
-    -moz-transition: 0.1s linear -moz-box-shadow;
-    -ms-transition: 0.1s linear box-shadow;
-    -o-transition: 0.1s linear box-shadow;
-    transition: 0.1s linear box-shadow;
+  font-size: 100%;
+  *font-size: 90%; /*IE 6/7 - To reduce IE's oversized button text*/
+  *overflow: visible; /*IE 6/7 - Because of IE's overly large left/right padding on buttons */
+  padding: 0.5em 1.5em 0.5em;
+  color: #1a2518; /* rgba not supported (IE 8) */
+  /* color: rgba(0, 0, 0, 0.80); rgba supported */
+  /* *color: #444; IE 6 & 7 */
+  border: 1px solid #b5ccb3; /*IE 6/7/8*/
+  border: none rgba(0, 0, 0, 0); /*IE9 + everything else*/
+  background-color: #bed2bc;
+  text-decoration: none;
+  border-radius: 2px;
+  -webkit-font-smoothing: antialiased;
+  /* Transitions */
+  -webkit-transition: 0.1s linear -webkit-box-shadow;
+  -moz-transition: 0.1s linear -moz-box-shadow;
+  -ms-transition: 0.1s linear box-shadow;
+  -o-transition: 0.1s linear box-shadow;
+  transition: 0.1s linear box-shadow;
 }
 
 .pure-skin-broadstack .pure-button-hover,
 .pure-skin-broadstack .pure-button:hover {
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#00000000', GradientType=0);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.05)));
-    background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.15));
-    background-image: -moz-linear-gradient(top, rgba(0,0,0, 0.05) 0%, rgba(0,0,0, 0.05));
-    background-image: -ms-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.15));
-    background-image: -o-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.05));
-    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.05));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#00000000', GradientType=0);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.05)));
+  background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.15));
+  background-image: -moz-linear-gradient(top, rgba(0,0,0, 0.05) 0%, rgba(0,0,0, 0.05));
+  background-image: -ms-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.15));
+  background-image: -o-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.05));
+  background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.05));
 }
 
 .pure-skin-broadstack .pure-button:focus {
-    outline: 0;
+  outline: 0;
 }
 .pure-skin-broadstack .pure-button-active,
 .pure-skin-broadstack .pure-button:active {
-    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+  box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
 }
 
 .pure-skin-broadstack .pure-button[disabled],
 .pure-skin-broadstack .pure-button-disabled,
 .pure-skin-broadstack .pure-button-disabled:hover,
 .pure-skin-broadstack .pure-button-disabled:active {
-    border: none;
-    background-image: none;
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-    filter: alpha(opacity=40);
-    -khtml-opacity: 0.40;
-    -moz-opacity: 0.40;
-    opacity: 0.40;
-    cursor: not-allowed;
-    box-shadow: none;
+  border: none;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  filter: alpha(opacity=40);
+  -khtml-opacity: 0.40;
+  -moz-opacity: 0.40;
+  opacity: 0.40;
+  cursor: not-allowed;
+  box-shadow: none;
 }
 
 .pure-skin-broadstack .pure-button-hidden {
-    display: none;
+  display: none;
 }
 
 /* Firefox: Get rid of the inner focus border */
 .pure-skin-broadstack .pure-button::-moz-focus-inner{
-    padding: 0;
-    border: 0;
+  padding: 0;
+  border: 0;
 }
 
 .pure-skin-broadstack .pure-button-primary,
 .pure-skin-broadstack .pure-button-selected,
 .pure-skin-broadstack a.pure-button-primary,
 .pure-skin-broadstack a.pure-button-selected {
-    background-color: #60a158;
-    color: #020302;
+  background-color: #60a158;
+  color: #020302;
 }
 
 /* from PURE menu-core.css */
@@ -112,98 +112,98 @@ body {
 /*TODO: Remove this lint rule override after a refactor of this code.*/ 
 
 .pure-skin-broadstack .pure-menu ul {
-    position: absolute;
-    visibility: hidden;
+  position: absolute;
+  visibility: hidden;
 }
 
 .pure-skin-broadstack .pure-menu.pure-menu-open {
-    visibility: visible;
-    z-index: 2;
-    width: 100%;
+  visibility: visible;
+  z-index: 2;
+  width: 100%;
 }
 
 .pure-skin-broadstack .pure-menu ul {
-    left: -10000px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    top: -10000px;
-    z-index: 1;
+  left: -10000px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  top: -10000px;
+  z-index: 1;
 }
 
 .pure-skin-broadstack .pure-menu > ul { position: relative; }
 
 .pure-skin-broadstack .pure-menu-open > ul {
-    left: 0;
-    top: 0;
-    visibility: visible;
+  left: 0;
+  top: 0;
+  visibility: visible;
 }
 
 .pure-skin-broadstack .pure-menu-open > ul:focus {
-    outline: 0;
+  outline: 0;
 }
 
 .pure-skin-broadstack .pure-menu li {
-    position: relative;
+  position: relative;
 }
 
 .pure-skin-broadstack .pure-menu a, .pure-skin-broadstack .pure-menu .pure-menu-heading {
-    display: block;
-    color: inherit;
-    line-height: 1.5em;
-    padding: 0.35em 1.4em;
-    text-decoration: none;
-    white-space: nowrap;
+  display: block;
+  color: inherit;
+  line-height: 1.5em;
+  padding: 0.35em 1.4em;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .pure-skin-broadstack .pure-menu.pure-menu-horizontal > .pure-menu-heading {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    margin: 0;
-    vertical-align: middle;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  margin: 0;
+  vertical-align: middle;
 }
 .pure-skin-broadstack .pure-menu.pure-menu-horizontal > ul {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    vertical-align: middle;
-    /* height: 2.4em; removed for Skin Builder */
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: middle;
+  /* height: 2.4em; removed for Skin Builder */
 }
 
 .pure-skin-broadstack .pure-menu li a { padding: 0.35em 1.4em; }
 
 .pure-skin-broadstack .pure-menu-can-have-children > .pure-menu-label:after {
-    content: '\25B8';
-    float: right;
-    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif; /* These specific fonts have the Unicode char we need. */
-    margin-right: -20px;
-    margin-top: -1px;
+  content: '\25B8';
+  float: right;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif; /* These specific fonts have the Unicode char we need. */
+  margin-right: -20px;
+  margin-top: -1px;
 }
 
 .pure-skin-broadstack .pure-menu-can-have-children > .pure-menu-label {
-    padding-right: 30px;
+  padding-right: 30px;
 }
 
 .pure-skin-broadstack .pure-menu-separator {
-    background-color: #d7e4d7;
-    display: block;
-    height: 1px;
-    font-size: 0;
-    margin: 7px 2px;
-    overflow: hidden;
+  background-color: #d7e4d7;
+  display: block;
+  height: 1px;
+  font-size: 0;
+  margin: 7px 2px;
+  overflow: hidden;
 }
 
 .pure-skin-broadstack .pure-menu-hidden {
-    display: none;
+  display: none;
 }
 
 /* FIXED MENU */
 .pure-skin-broadstack .pure-menu-fixed {
-    position: fixed;
-    top:0;
-    left:0;
-    width: 100%;
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
 }
 
 
@@ -211,31 +211,31 @@ body {
 
 /* Initial menus should be inline-block so that they are horizontal */
 .pure-skin-broadstack .pure-menu-horizontal li {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    vertical-align: middle;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: middle;
 }
 
 /* Submenus should still be display:block; */
 .pure-skin-broadstack .pure-menu-horizontal li li {
-    display: block;
+  display: block;
 }
 
 /* Content after should be down arrow */
 .pure-skin-broadstack .pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label:after {
-    content: "\25BE";
+  content: "\25BE";
 }
 /*Add extra padding to elements that have the arrow so that the hover looks nice */
 .pure-skin-broadstack .pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label {
-    padding-right: 30px;
+  padding-right: 30px;
 }
 
 /* Adjusting separator for vertical menus */
 .pure-skin-broadstack .pure-menu-horizontal li.pure-menu-separator {
-    height: 50%;
-    width: 1px;
-    margin: 0 7px;
+  height: 50%;
+  width: 1px;
+  margin: 0 7px;
 }
 
 /* Submenus should be horizontal separator again */
@@ -253,51 +253,51 @@ margin: 7px 2px;
 
 .pure-skin-broadstack .pure-paginator {
 
-    /* `pure-g` Grid styles */
-    letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
-    *letter-spacing: normal; /* reset IE < 8 */
-    *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
-    text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
+  /* `pure-g` Grid styles */
+  letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
+  *letter-spacing: normal; /* reset IE < 8 */
+  *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
+  text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
 
-    /* `pure-paginator` Specific styles */
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  /* `pure-paginator` Specific styles */
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .opera-only :-o-prefocus,
 .pure-skin-broadstack .pure-paginator {
-    word-spacing: -0.43em;
+  word-spacing: -0.43em;
 }
 
 /* `pure-u` Grid styles */
 .pure-skin-broadstack .pure-paginator li {
-    display: inline-block;
-    *display: inline; /* IE < 8: fake inline-block */
-    zoom: 1;
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    text-rendering: auto;
+  display: inline-block;
+  *display: inline; /* IE < 8: fake inline-block */
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
 }
 .pure-skin-broadstack .pure-paginator .pure-button {
-    border-radius: 0;
-    padding: 0.8em 1.4em;
-    vertical-align: top;
-    height: 1.1em;
+  border-radius: 0;
+  padding: 0.8em 1.4em;
+  vertical-align: top;
+  height: 1.1em;
 }
 .pure-skin-broadstack .pure-paginator .pure-button:focus,
 .pure-skin-broadstack .pure-paginator .pure-button:active {
-    outline-style: none;
+  outline-style: none;
 }
 .pure-skin-broadstack .pure-paginator .prev,
 .pure-skin-broadstack .pure-paginator .next {
-    /*color: #C0C1C3; allow .pure-button to color text*/
+  /*color: #C0C1C3; allow .pure-button to color text*/
 }
 .pure-skin-broadstack .pure-paginator .prev {
-    border-radius: 4px 0px 0px 4px;
+  border-radius: 4px 0px 0px 4px;
 }
 .pure-skin-broadstack .pure-paginator .next {
-    border-radius: 0px 4px 4px 0px;
+  border-radius: 0px 4px 4px 0px;
 }
 /* end from PURE menu-paginator.css ******************************/
 /* from PURE menu.css *******************************************/
@@ -307,83 +307,83 @@ margin: 7px 2px;
 
 .pure-skin-broadstack .pure-menu.pure-menu-open,
 .pure-skin-broadstack .pure-menu.pure-menu-horizontal li .pure-menu-children {
-    background: #eaf1ea; /* Old browsers */
-    border: 1px solid #d7e4d7;
+  background: #eaf1ea; /* Old browsers */
+  border: 1px solid #d7e4d7;
 }
 
 /* remove borders for horizontal menus */
 .pure-skin-broadstack .pure-menu.pure-menu-horizontal,
 .pure-skin-broadstack .pure-menu.pure-menu-horizontal .pure-menu-heading {
-    border: none;
+  border: none;
 }
 
 
 /* LINK STYLES */
 
 .pure-skin-broadstack .pure-menu a {
-    border: 1px solid transparent;
-    border-left: none;
-    border-right: none;
+  border: 1px solid transparent;
+  border-left: none;
+  border-right: none;
 
 }
 
 .pure-skin-broadstack .pure-menu a,
 .pure-skin-broadstack .pure-menu .pure-menu-can-have-children > li:after {
-    color: #2f462f;
+  color: #2f462f;
 }
 
 .pure-skin-broadstack .pure-menu .pure-menu-can-have-children > li:hover:after {
-    color: #1f2e1f;
+  color: #1f2e1f;
 }
 
 /* Focus style for a dropdown menu-item when the parent has been opened */
 .pure-skin-broadstack .pure-menu .pure-menu-open {
-    background: #c5d8c5;
+  background: #c5d8c5;
 }
 
 .pure-skin-broadstack .pure-menu li a:hover,
 .pure-skin-broadstack .pure-menu li a:focus {
-    background: #c5d8c5;
+  background: #c5d8c5;
 }
 
 /* DISABLED STATES */
 .pure-skin-broadstack .pure-menu li.pure-menu-disabled a:hover,
 .pure-skin-broadstack .pure-menu li.pure-menu-disabled a:focus {
-    background: #eaf1ea;
-    color: #82ab82;
+  background: #eaf1ea;
+  color: #82ab82;
 }
 
 .pure-skin-broadstack .pure-menu .pure-menu-disabled > a {
-    background-image: none;
-    border-color: transparent;
-    cursor: default;
+  background-image: none;
+  border-color: transparent;
+  cursor: default;
 }
 
 .pure-skin-broadstack .pure-menu .pure-menu-disabled > a,
 .pure-skin-broadstack .pure-menu .pure-menu-can-have-children.pure-menu-disabled > a:after {
-    color: #82ab82;
+  color: #82ab82;
 }
 
 /* HEADINGS */
 .pure-skin-broadstack .pure-menu .pure-menu-heading {
-    color: #121c12;
-    text-transform: uppercase;
-    font-size: 90%;
-    margin-top: 0.5em;
-    border-bottom: solid 1px #d7e4d7;
+  color: #121c12;
+  text-transform: uppercase;
+  font-size: 90%;
+  margin-top: 0.5em;
+  border-bottom: solid 1px #d7e4d7;
 }
 
 
 /* SELECTED MENU ITEM */
 .pure-skin-broadstack .pure-menu li.pure-menu-selected a {
-    background-color: #60a158;
-    color: #020302;
+  background-color: #60a158;
+  color: #020302;
 }
 
 /* FIXED MENU */
 .pure-skin-broadstack .pure-menu.pure-menu-open.pure-menu-fixed {
-    border: none;
-    border-bottom: 1px solid #d7e4d7;
+  border: none;
+  border-bottom: 1px solid #d7e4d7;
 }
 /* end from PURE menu.css ***********************************/
 /* from PURE menu-responsive.css ****************************/
@@ -391,15 +391,14 @@ margin: 7px 2px;
 
 @media (max-width: 480px) {
 
-    .pure-skin-broadstack .pure-menu-horizontal {
-        width:100%;
-    }
+  .pure-skin-broadstack .pure-menu-horizontal {
+    width:100%;
+  }
 
-    .pure-skin-broadstack .pure-menu-children li {
-        display: block;
-        border-bottom:1px solid #d7e4d7;
-    }
+  .pure-skin-broadstack .pure-menu-children li {
+    display: block;
+    border-bottom:1px solid #d7e4d7;
+  }
 
 }
 /* end from menu-responsive.css ******************/
-
