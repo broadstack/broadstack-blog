@@ -9,6 +9,10 @@ body,html {
   min-width: 320px;
 }
 
+body {
+  background-color: $background-color;
+}
+
 a {
   color: $primary-color;
   text-decoration: none;
@@ -90,6 +94,7 @@ a {
       color: white;
       border: 2px solid $secondary-color;
       background-color: transparent;
+      -webkit-font-smoothing: antialiased;
     }
     &.pure-button:hover {
       border-color: white;
