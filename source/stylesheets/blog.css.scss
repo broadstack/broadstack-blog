@@ -79,9 +79,7 @@ a:focus {
   list-style: none;
 }
 .nav-item {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
+  @include inline-block;
 }
 .nav-item a {
   margin-top: 1em;
