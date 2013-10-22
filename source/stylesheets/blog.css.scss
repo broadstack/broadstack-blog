@@ -11,10 +11,9 @@ body,html {
 a {
   color: #60a158;
   text-decoration: none;
-}
-a:hover,
-a:focus {
-  text-decoration: underline;
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
 }
 
 /* LAYOUT CSS */
@@ -45,14 +44,13 @@ a:focus {
 }
 .brand-title {
   text-transform: uppercase;
+  a {
+    color: white;
+  }
 }
 .brand-tagline {
   font-weight: 300;
   color: #bed2bc;
-}
-
-.brand-title a {
-  color: white;
 }
 
 @media (max-width: 1080px) and (min-width: 767px) {
@@ -187,14 +185,14 @@ a:focus {
 .footer {
   text-align: center;
   padding: 1em 0;
-}
-.footer a {
-  color: #ccc;
-  font-size: 80%;
-}
-.footer .pure-menu a:hover,
-.footer .pure-menu a:focus {
-  background: none;
+  a {
+    color: #ccc;
+    font-size: 80%;
+  }
+  .pure-menu a:hover,
+  .pure-menu a:focus {
+    background: none;
+  }
 }
 
 @media (max-width: 767px) {
