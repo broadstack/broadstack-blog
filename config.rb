@@ -125,3 +125,5 @@ activate :s3_sync do |s3_sync|
   end
 
 end
+
+activate :bourbon

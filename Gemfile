@@ -9,6 +9,11 @@ gem "middleman"
 # Blogging model for Middleman.
 gem "middleman-blog"
 
+# Bourbon: simple mixins for Sass.
+# This registers it as a middleman extension:
+# https://github.com/railsjedi/middleman-bourbon/blob/master/lib/middleman-bourbon.rb
+gem "middleman-bourbon"
+
 # Deployment to Amazon S3.
 # See config.rb, expects AWS_KEY_ID and AWS_SECRET_KEY in ENV.
 gem "middleman-s3_sync"
