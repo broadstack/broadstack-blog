@@ -41,8 +41,7 @@ a:focus {
 .brand-title,
 .brand-tagline {
   margin: 0;
-  transition: font-size 0.2s ease;
-  -webkit-transition: font-size 0.2s ease;
+  @include transition (font-size 0.2s ease);
 }
 .brand-title {
   text-transform: uppercase;
