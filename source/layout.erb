@@ -7,6 +7,8 @@
     <!--<meta name="description" content="A layout example that shows off a blog page with a list of posts.">-->
     <title>Broadstack Blog</title>
 
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Broadstack Blog Feed">
+
     <% pure_modules = %w{base grids buttons menus}.map { |m| "pure/0.3.0/#{m}-min.css" } %>
     <link rel="stylesheet" href="//yui.yahooapis.com/pure/0.3.0/base-min.css">
     <link rel="stylesheet" href="//yui.yahooapis.com/combo?<%= pure_modules.join("&amp;") %>">
