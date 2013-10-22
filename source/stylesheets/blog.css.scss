@@ -1,4 +1,5 @@
 @import "bourbon";
+@import "constants";
 
 * {
   @include box-sizing(border-box);
@@ -9,7 +10,7 @@ body,html {
 }
 
 a {
-  color: #60a158;
+  color: $primary-color;
   text-decoration: none;
   &:hover, &:focus {
     text-decoration: underline;
@@ -28,8 +29,9 @@ a {
   bottom: 0;
   width: 25%;
   margin-left: -25%;
-  background: #60a158;
-  color: #fff;
+  // reversed color:
+  background: $primary-color;
+  color: $background-color;
 }
 
 .header {
@@ -50,7 +52,7 @@ a {
 }
 .brand-tagline {
   font-weight: 300;
-  color: #bed2bc;
+  color: $secondary-color;
 }
 
 @media (max-width: 1080px) and (min-width: 767px) {
@@ -86,7 +88,7 @@ a {
     }
     &.pure-button {
       color: white;
-      border: 2px solid #bed2bc;
+      border: 2px solid $secondary-color;
       background-color: transparent;
     }
     &.pure-button:hover {
@@ -111,8 +113,8 @@ a {
 
 .content-subhead {
   text-transform: uppercase;
-  color: #aaa;
-  border-bottom: 1px solid #eee;
+  color: #aaaaaa;
+  border-bottom: 1px solid #eeeeee;
   padding: 0.4em 0;
   font-size: 80%;
   font-weight: 500;
@@ -131,7 +133,7 @@ a {
 }
 .post-title {
   font-size: 2em;
-  color: #222;
+  color: #222222;
   margin-bottom: 0.2em;
 }
 .post-avatar {
@@ -142,12 +144,12 @@ a {
 .post-body,
 .post-description {
   font-family: Georgia, "Cambria", serif;
-  color: #444;
+  color: #444444;
   line-height: 1.8em;
   font-size: 120%;
 }
 .post-meta {
-  color: #999;
+  color: #999999;
   font-size: 90%;
   margin: 0;
 }
@@ -158,15 +160,15 @@ a {
 .post-image-meta {
   margin-top: -3.5em;
   margin-left: 1em;
-  color: #fff;
-  text-shadow: 0 1px 1px #333;
+  color: #ffffff;
+  text-shadow: 0 1px 1px #333333;
 }
 
 .footer {
   text-align: center;
   padding: 1em 0;
   a {
-    color: #ccc;
+    color: #cccccc;
     font-size: 80%;
   }
   .pure-menu a:hover,
@@ -206,7 +208,7 @@ pre.highlight {
 }
 
 blockquote {
-  border-left: 4px solid #bed2bc;
+  border-left: 4px solid $secondary-color;
   background-color: #f8f8f8;
   padding: 1px 1em;
   margin: 1em 0;
