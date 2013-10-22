@@ -80,33 +80,35 @@ a:focus {
 }
 .nav-item {
   @include inline-block;
-}
-.nav-item a {
-  margin-top: 1em;
-}
-.nav-item a:hover,
-.nav-item a:focus {
-  text-decoration: none;
-}
-.nav-item a.pure-button {
-  color: white;
-  border: 2px solid #bed2bc;
-  background-color: transparent;
-}
-.nav-item a.pure-button:hover {
-  border-color: white;
-  color: white;
-}
-.nav-item.broadstack-brand a,
-.nav-item.broadstack-brand a:hover {
-  background: url(/images/broadstack-15px.gif) black 10px 10px no-repeat;
-}
-.nav-item.broadstack-brand a {
-  padding-left: 32px;
-  padding-right: 12px;
-  text-transform: lowercase;
-  font-weight: bold;
-  line-height: 20px;
+
+  a {
+    margin-top: 1em;
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+    &.pure-button {
+      color: white;
+      border: 2px solid #bed2bc;
+      background-color: transparent;
+    }
+    &.pure-button:hover {
+      border-color: white;
+      color: white;
+    }
+  }
+
+  &.broadstack-brand {
+    a {
+      padding-left: 32px;
+      padding-right: 12px;
+      text-transform: lowercase;
+      font-weight: bold;
+      line-height: 20px;
+    }
+    a, a:hover {
+      background: url(/images/broadstack-15px.gif) black 10px 10px no-repeat;
+    }
+  }
 }
 
 .content-subhead {
