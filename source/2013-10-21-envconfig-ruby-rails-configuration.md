@@ -3,7 +3,7 @@ title: "Envconfig: Environmentally friendly Ruby configuration."
 date: 2013-10-21
 ---
 
-*envconfig reads your ENV and builds a config for your backing services / add-ons.*
+*envconfig simplifies configuration by reading your ENV and configuring your add-ons / backing services*
 
 ```ruby
 Envconfig.load("OPENREDIS_URL" => "redis://u:p@example.org:1234/").redis[:host]
@@ -12,11 +12,11 @@ Envconfig.load("OPENREDIS_URL" => "redis://u:p@example.org:1234/").redis[:host]
 
 Add-ons at [Broadstack][bs] and [Heroku][ha] let you easily add and remove
 [backing services][12bs] and change providers at a [deployment, not codebase,
-level][12codebase].  But in reality your app needs to know where to look in the
+level][12codebase].  However, your app needs to know where to look in the
 [ENV for configuration][12config], which usually means pushing new code to swap
 a backing service.
 
-[Envconfig][ecgithub] changes that for Ruby / Rails apps.
+[Envconfig][ecgithub] solves this for Ruby / Rails apps.
 
 Envconfig knows about many popular add-ons across [Broadstack][bs] and [Heroku
 Add-ons][ha], and it's easy to add more.  It finds them in your environment,
