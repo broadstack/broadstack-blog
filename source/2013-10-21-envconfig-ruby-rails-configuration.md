@@ -123,6 +123,8 @@ your app.
 * gem install [envconfig on RubyGems][ecrubygems]
 * gem install [envconfig-rails on RubyGems][ecrubygemsrails]
 
+[Comments on Hacker News](https://news.ycombinator.com/item?id=6602098)
+
 
 [bs]: https://broadstack.com/
 [ha]: https://addons.heroku.com/
