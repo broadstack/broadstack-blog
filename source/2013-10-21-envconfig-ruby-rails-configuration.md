@@ -3,68 +3,86 @@ title: "Envconfig: Environmentally friendly Ruby configuration."
 date: 2013-10-21
 ---
 
-*envconfig simplifies configuration by reading your ENV and configuring your add-ons / backing services*
+*If you run a Ruby app with Heroku or Broadstack add-ons, you should use Envconfig.*
 
-```ruby
-Envconfig.load("OPENREDIS_URL" => "redis://u:p@example.org:1234/").redis[:host]
-# => "example.org"
-```
+[Envconfig][ecgithub] is easy [environment-based configuration][12config] for
+Ruby / Rails.  It lets you add, remove and swap add-ons or other backing
+services without changing your code, and without conditional configuration
+files.  Just update your `ENV` (that's what add-ons on [Broadstack][bs] and
+[Heroku][ha] do) and Envconfig figures out your configuration.
 
-Add-ons at [Broadstack][bs] and [Heroku][ha] let you easily add and remove
-[backing services][12bs] and change providers at a [deployment, not codebase,
-level][12codebase].  However, your app needs to know where to look in the
-[ENV for configuration][12config], which usually means pushing new code to swap
-a backing service.
-
-[Envconfig][ecgithub] solves this for Ruby / Rails apps.
-
-Envconfig knows about many popular add-ons across [Broadstack][bs] and [Heroku
-Add-ons][ha], and it's easy to add more.  It finds them in your environment,
-exposing them as a consistent configuration interface.  This lets you easily
-switch between providers, or between development and production, without having
-  configuration conditionals in your code.
+Envconfig knows about common vars like `DATABASE_URL` and `SMTP_HOST`, as well
+as provider-specific vars like `MONGOHQ_URL` and `POSTMARK_SMTP_SERVER`. It
+uses this knowledge to expose a consistent configuration interface, and to
+automatically configure your app.
 
 It plays nicely with [dotenv][dotenv] in development, and it takes care of
 menial work like parsing out config URIs into their components, splitting comma
 separated lists into arrays, etc.
 
 
-## An example
+## Example: Auto-configure Rails
 
-You've used Broadstack or Heroku to provision [Postmark][bspostmark] for mail
-delivery, and [MongoHQ][bsmongohq] for persistence, so your ENV contains
-something like this:
+Here's an example showing how easy it is to create a Rails app, and see it
+auto-configured to use the [Postmark][bspostmark] mail settings in the environment.
 
 ```sh
-POSTMARK_SMTP_SERVER="smtp.example.org"
-POSTMARK_API_KEY="bcca0a78abbaed6533f3c8017b804bda"
+# Create a new Rails application
+rails new test_app -BSJTq
+cd test_app
+
+# dotenv-rails to read `.env` file into Ruby's ENV
+# envconfig-rails to read ENV and configure Rails
+cat >> Gemfile << DONE
+gem "dotenv-rails"
+gem "envconfig-rails"
+DONE
+bundle --quiet
+
+# Postmark settings in ENV
+# (This is like provisioning Postmark on Broadstack or Heroku)
+cat >> .env << DONE
+POSTMARK_SMTP_SERVER="example.org"
+POSTMARK_API_KEY="topsecret"
+DONE
+
+# Watch envconfig-rails auto-configure ActionMailer
+mkdir -p log && touch log/development.log
+tail -f log/development.log &
+rails runner 'p Rails.application.config.action_mailer.smtp_settings'
+
+# Output:
+# Envconfig: Using Postmark for SMTP
+# {:port=>"25", :authentication=>:plain, :address=>"example.org", :user_name=>"topsecret", :password=>"topsecret"}
+```
+
+
+## Example: Configuration Interface
+
+We'll put the following into Ruby's `ENV` via our `.env` file.
+(This is the same as provisioning [MongoHQ][bsmongohq] and MemCachier via
+Broadstack or Heroku.)
+
+```sh
 MONGOHQ_URL="mongodb://user:pass@mongo.example.com:2468/stack618"
+MEMCACHIER_SERVERS="m1.example.org:11211,m2.example.org:11211"
+MEMCACHIER_USERNAME="memcachieruser"
+MEMCACHIER_PASSWORD="memcachierpass"
 ```
 
-Restart Rails, and you'll see `Envconfig: Using Postmark for SMTP` in the logs.
-This is `envconfig-rails` telling you ActionMailer has been configured:
-
-```ruby
-Rails.application.config.action_mailer.smtp_settings  # => {
-  :port => "25",
-  :authentication => :plain,
-  :address => "smtp.example.org",
-  :user_name => "bcca0a78abbaed6533f3c8017b804bda",
-  :password => "bcca0a78abbaed6533f3c8017b804bda",
-}
-```
-
-Of course, you can also get at the configuration directly:
+And then from within Rails, e.g. `rails console`:
 
 ```ruby
 # Loads from ENV by default.
 config = Envconfig.load
 
 # Individual keys:
-config.smtp[:address] # => "smtp.example.org"
+config.mongodb[:url]  # => "mongodb://user:pass@mongo.example.com:2468/stack618"
 config.mongodb[:host] # => "mongo.example.com"
+config.memcached[:servers]  # => "m1.example.org:11211,m2.example.org:11211"
+config.memcached[:server_strings]  # => ["m1.example.org:11211", "m2.example.org:11211"]
 
-# Service configuration:
+# Entire service configuration:
 config.mongodb.to_h # => {
   url: "mongodb://user:pass@mongo.example.com:2468/stack618",
   database: "stack618",
@@ -109,9 +127,7 @@ your app.
 [bs]: https://broadstack.com/
 [ha]: https://addons.heroku.com/
 [12factor]: http://12factor.net/
-[12bs]: http://12factor.net/backing-services
 [12config]: http://12factor.net/config
-[12codebase]: http://12factor.net/codebase
 [readme]: https://github.com/broadstack/envconfig#readme
 [bspostmark]: https://broadstack.com/addons/postmark
 [bsmongohq]: https://broadstack.com/addons/mongohq
